@@ -7,11 +7,13 @@ Solution to the GKS 2020 Round C problem "Stable Wall"
 
 ### Generate a directed graph from the input
 
-Let <img src="https://latex.codecogs.com/svg.latex?\Sigma=\{Z,O,M,A,*\}"> be the set of letters and <img src="https://latex.codecogs.com/svg.latex?E=\{(A,O),(M,O),(O,Z),(Z,*)\}"> the set of directed dependencies between letters. Here, <img src="https://latex.codecogs.com/svg.latex?*"> refers to the "ground".
+Let <img src="https://latex.codecogs.com/svg.latex?\Sigma=\{Z,O,M,A\}"> be the set of letters and <img src="https://latex.codecogs.com/svg.latex?E=\{(A,O),(M,O),(O,Z)\}"> the set of directed dependencies between letters. Here, <img src="https://latex.codecogs.com/svg.latex?*"> refers to the "ground".
 
-A dependency <img src="https://latex.codecogs.com/svg.latex?d=(a,b)"> is *redundant* (noted <img src="https://latex.codecogs.com/svg.latex?r(d)">) iff <img src="https://latex.codecogs.com/svg.latex?b\neq*\land\{(a,x),(x,b)\}\subset{E}">.
+A dependency <img src="https://latex.codecogs.com/svg.latex?d=(a,b)"> is *redundant* (noted <img src="https://latex.codecogs.com/svg.latex?r(d)">) iff <img src="https://latex.codecogs.com/svg.latex?\{(a,x),(x,b)\}\subset{E}">.
 
-Let <img src="https://latex.codecogs.com/svg.latex?E'=\{d\in{E}\mid\lnot{r}(d)\}">. In this case, <img src="https://latex.codecogs.com/svg.latex?E=E'"> but this is not always true.
+Let <img src="https://latex.codecogs.com/svg.latex?\Sigma'=\Sigma\cup\{*\}"> where <img src="https://latex.codecogs.com/svg.latex?*"> refers to the "ground".
+
+Let <img src="https://latex.codecogs.com/svg.latex?E'=\{d\in{E}\mid\lnot{r}(d)\}\cup\{(a,*)\mid{a}\in\Sigma,\nexists(x,y)\in{E},x=a\}">. In this case, <img src="https://latex.codecogs.com/svg.latex?E'=\{(A,O),(M,O),(O,Z),(Z,*)\}">. In this case, there were no *redundant* dependencies. The dependency <img src="https://latex.codecogs.com/svg.latex?(Z,*)"> was added to allow easier computation of the node degrees.
 
 Let <img src="https://latex.codecogs.com/svg.latex?G"> denote the directed graph <img src="https://latex.codecogs.com/svg.latex?(\Sigma,E')">.
 
