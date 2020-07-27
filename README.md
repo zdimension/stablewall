@@ -29,7 +29,7 @@ Let <img src="https://latex.codecogs.com/svg.latex?R^{+}"> denote the transitive
 
 The valid solutions <img src="https://latex.codecogs.com/svg.latex?\Omega"> are the permutations of <img src="https://latex.codecogs.com/svg.latex?\Sigma"> ordered under <img src="https://latex.codecogs.com/svg.latex?\preceq">.
 
-In other words, let <img src="https://latex.codecogs.com/svg.latex?I=\left\[1,\left|\Sigma\right|-1\right\]">, we have <img src="https://latex.codecogs.com/svg.latex?\Omega=\{(\sigma_i)_{i\in{I}}\in{S}(\Sigma)\mid\forall{i}\in{I},\sigma_{i}\preceq\sigma_{i+1}\}"> (note that here <img src="https://latex.codecogs.com/svg.latex?\sigma"> is an ordered tuple and not a set).
+In other words, we have <img src="https://latex.codecogs.com/svg.latex?\Omega=\{(\sigma_i)_{\left\[1,\left|\Sigma\right|\right\]}\in{S}(\Sigma)\mid\forall{i}\in\left\[1,\left|\Sigma\right|-1\right\],\sigma_{i}\preceq\sigma_{i+1}\}"> (note that here <img src="https://latex.codecogs.com/svg.latex?\sigma"> is an ordered tuple and not a set).
 
 ### Step 3: Preprocessing
 
